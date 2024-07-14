@@ -18,7 +18,7 @@ use Picqer\BolRetailerV10\Exception\ResponseException;
 use Picqer\BolRetailerV10\Exception\UnauthorizedException;
 use Picqer\BolRetailerV10\Model\Authentication\TokenResponse;
 use Picqer\BolRetailerV10\Model\Authentication\TokenRequest;
-use Psr\Http\Client\ClientExceptionInterface
+use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
