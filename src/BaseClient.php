@@ -4,6 +4,7 @@ namespace Picqer\BolRetailerV10;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\ConnectException as GuzzleConnectException;
 use GuzzleHttp\Exception\RequestException;
@@ -612,7 +613,7 @@ class BaseClient
             $retries,
             RequestInterface $request,
             ?ResponseInterface $response = null,
-            ?RequestException $exception = null
+            RequestException|ClientException|null $exception = null
         ) {
             return $this->respectRateLimits
                 && $response
